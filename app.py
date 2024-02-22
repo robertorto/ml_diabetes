@@ -24,7 +24,7 @@ dados = data_handler.load_data()
 model = pickle.load(open('./models/model.pkl', 'rb')) 
 
 # começa a estrutura da interface do sistema
-st.title('App dos dados de diabetes')
+st.title('App Grupo Roberto & Wagner - Preditor Diabetes')
 
 data_analyses_on = st.toggle('Exibir análise dos dados')
 

@@ -6,8 +6,8 @@ import json
 # como o nome informa, este arquivo serve para dar acesso e manipular os dados do nosso dataset.
 
 def load_data():
-    # dados = pd.read_csv('\ml_diabetes\data\diabetes.csv')
-    dados = pd.read_csv('C:\\Users\\Roberto\\ml_deploy_aula\\ml_diabetes\\data\\diabetes.csv')
+    dados = pd.read_csv('./data/diabetes.csv')
+    # dados = pd.read_csv('C:\\Users\\Roberto\\ml_deploy_aula\\ml_diabetes\\data\\diabetes.csv')
 
     # nosso modelo descartou a informação SkinThickness por ela não ajudar na previsão, então vamos descartá-la também
     dados = dados.drop(['SkinThickness'], axis=1)

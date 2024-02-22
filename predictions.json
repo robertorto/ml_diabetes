@@ -1,0 +1,1 @@
+[{"Pregnancies": 0, "Glucose": 120, "BloodPressure": 60, "Insulin": 100, "BMI": 30.0, "DiabetesPedigreeFunction": 0.05, "Age": 25, "CorrectPrediction": true, "Outcome": 0}, {"Pregnancies": 4, "Glucose": 160, "BloodPressure": 79, "Insulin": 260, "BMI": 45.23, "DiabetesPedigreeFunction": 1.29, "Age": 45, "CorrectPrediction": true, "Outcome": 1}]

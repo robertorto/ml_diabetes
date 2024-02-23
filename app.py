@@ -24,9 +24,11 @@ dados = data_handler.load_data()
 model = pickle.load(open('./models/model.pkl', 'rb')) 
 
 # começa a estrutura da interface do sistema
-st.title('App Grupo Roberto & Wagner - Preditor Diabetes')
+st.title('App Grupo: Roberto & Wagner')
+st.divider()
 
 data_analyses_on = st.toggle('Exibir análise dos dados')
+st.divider()
 
 if data_analyses_on:
     st.header('Dados do dataset Diabetes')
@@ -50,7 +52,7 @@ if data_analyses_on:
 # daqui em diante vamos montar a inteface para capturar os dados de input do usuário para realizar a predição
 # que vai identificar se um paciente possui ou não diabetes
 st.header('Preditor de pacientes com diabetes')
-
+st.divider()
 
 # Atributos exibidos e utilizados pelo modelo de previsão:
 
@@ -212,6 +214,7 @@ if submit or 'outcome' in st.session_state:
             del st.session_state['outcome']
             st.rerun()
 
+st.divider()
 
 # calcula e exibe as métricas de avaliação do modelo aqui, somente a acurária está sendo usada
 # TODO: adicionar as mesmas métricas utilizadas na disciplina de treinamento e validação do modelo (recall, precision, F1-score)

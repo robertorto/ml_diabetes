@@ -25,7 +25,6 @@ model = pickle.load(open('./models/model.pkl', 'rb'))
 
 # começa a estrutura da interface do sistema
 st.title('App Grupo: Roberto & Wagner')
-st.divider()
 
 data_analyses_on = st.toggle('Exibir análise dos dados')
 st.divider()
@@ -52,23 +51,11 @@ if data_analyses_on:
 # daqui em diante vamos montar a inteface para capturar os dados de input do usuário para realizar a predição
 # que vai identificar se um paciente possui ou não diabetes
 st.header('Preditor de pacientes com diabetes')
-st.divider()
 
-# Atributos exibidos e utilizados pelo modelo de previsão:
 
-# Pregnancies - 'int'
-# Glucose - 'int'
-# BloodPressure - 'int'
-# Insulin - 'int'
-# BMI - 'float'
-# DiabetesPedigreeFunction - 'float'
-# Age - 'int'
-# Outcome - 'int' objetivo da previsão
-
-# ordem ['Pregnancies', 'Glucose', 'BloodPressure', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
-
-# essas foram as informações utilizadas para treinar o modelo
-# assim, todas essas informações também devem ser passadas para o modelo realizar a predição
+# Todos atributos utilizados pelo modelo de previsão e respectiva ordem:
+# 'Pregnancies', 'Glucose', 'BloodPressure', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'
+# Todas atributos também devem ser passadas para que nosso modelo treinado possa realizar sua predição
 
 # define a linha 1 de inputs com 3 colunas
 col1, col2, col3 = st.columns(3)
@@ -111,12 +98,12 @@ with col1:
     age = st.slider('How old are the patient?', 0, 100, 25)
 
 with col2:
-    # Botão que serve pra fazer a verificação
+    # Botão para realizar a verificação
     submit = st.button('Verificar')
 
 
 
-# Como todos os valores deste dataset já são numéricos, não precisamos fazer o data mapping
+# Como todos os valores deste dataset já são numéricos, não precisamos mapeamento
 # Vamos criar um dicionário para armazenar todos os dados do paciente
 
 paciente = {}
